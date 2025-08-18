@@ -10,4 +10,11 @@
   --accent-ghost-color: #ff007066;
   --base-color: #f1b2ce;
   --title-color: #000028;
+  --page-offset: 10px;
+}
+
+@media (width >= 768px) {
+  :root {
+    --page-offset: 20px;
+  }
 }

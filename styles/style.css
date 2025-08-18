@@ -9,7 +9,7 @@
   background-attachment: fixed;
   background-repeat: no-repeat;
   font-family: "IBM Plex Mono", sans-serif;
-  padding: 0 10px;
+  padding: 0 var(--page-offset);
 }
 
 /* Заголовок */
@@ -19,7 +19,7 @@
   min-height: 668px;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
-  padding: 10px 0;
+  padding: var(--page-offset) 0;
 }
 
 .decorated-zone {
@@ -29,7 +29,7 @@
 .decorated-zone::before {
   content: "";
   position: absolute;
-  top: 10px;
+  top: var(--page-offset);
   right: 0;
   width: 25px;
   height: 25px;
@@ -40,7 +40,7 @@
 .decorated-zone::after {
   content: "";
   position: absolute;
-  bottom: 10px;
+  bottom: var(--page-offset);
   left: 0;
   width: 25px;
   height: 25px;
@@ -54,7 +54,7 @@
   font-size: 18px;
   position: absolute;
   right: 10px;
-  top: 10px;
+  top: var(--page-offset);
   display: flex;
   align-items: center;
   gap: 10px;
@@ -222,4 +222,19 @@
 
 .footer__title {
   text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+@media (width >= 768px) {
+  .header {
+    min-height: 1024px;
+  }
+
+  .header__title {
+    margin-left: -20px;
+  }
+
+  .header__description {
+    max-width: 364px;
+    justify-self: end;
+  }
 }
