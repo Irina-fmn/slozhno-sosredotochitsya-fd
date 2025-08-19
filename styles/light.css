@@ -15,7 +15,7 @@
   --title-color: #353430;
 }
 
-.theme-light .rec {
+.theme-light .decoration {
   display: none;
 }
 
@@ -31,7 +31,7 @@
     --title-color: #353430;
   }
 
-  .rec {
+  .decoration {
     display: none;
   }
 }
