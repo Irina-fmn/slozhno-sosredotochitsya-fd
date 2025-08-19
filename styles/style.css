@@ -1,7 +1,6 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  padding: 0 var(--page-offset);
   font-family: "IBM Plex Mono", sans-serif;
   background-image: var(--bg-image);
   background-color: var(--bg-color);
@@ -10,6 +9,8 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+
+ /* padding: 0 var(--page-offset); */
 
 /* Заголовок */
 
