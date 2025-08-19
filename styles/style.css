@@ -1,14 +1,14 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  background-image: var(--bg-image), url(/images/cover-image-dark.png);
-  background-color: var(--bg-color), #000028;
+  padding: 0 var(--page-offset);
+  font-family: "IBM Plex Mono", sans-serif;
+  background-image: var(--bg-image);
+  background-color: var(--bg-color);
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
   background-repeat: no-repeat;
-  font-family: "IBM Plex Mono", sans-serif;
-  padding: 0 var(--page-offset);
+  background-attachment: fixed;
 }
 
 /* Заголовок */
@@ -171,7 +171,7 @@
 }
 
 .section__link {
-  text-shadow: 1.5px 1.5px 0 var(--decorate-color);
+  text-shadow: 1.5px 1.5px 0 var(--accent-color);
   text-decoration: none;
   position: relative;
 }
@@ -283,7 +283,8 @@
 }
 
 @media (width >= 1024px) {
-  .header {
+  .header,
+  .footer {
     min-height: 768px;
   }
 
@@ -305,12 +306,9 @@
     margin-top: 60px;
   }
 
-  .content__section-center .section__title {
-    grid-column: 1 / -1;
-  }
-
   .content__section-center .card {
     grid-column: auto;
+    grid-row: 2;
   }
 }
 
