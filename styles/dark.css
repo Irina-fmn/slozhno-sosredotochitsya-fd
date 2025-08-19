@@ -14,16 +14,3 @@
   --base-color: #f1b2ce;
   --title-color: #000028;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-image: url("/images/cover-image-dark.png");
-    --bg-color: #000028;
-    --logo-color: #db00ff;
-    --accent-color: #ff0070;
-    --decorate-color: #ff0070;
-    --accent-ghost-color: #ff007066;
-    --base-color: #f1b2ce;
-    --title-color: #000028;
-  }
-}
