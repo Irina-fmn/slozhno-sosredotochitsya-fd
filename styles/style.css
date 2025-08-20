@@ -1,7 +1,7 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  font-family: "IBM Plex Mono", sans-serif;
+  font-family: "IBM Plex Mono", monospace, sans-serif;
   background-image: var(--bg-image);
   background-color: var(--bg-color);
   background-size: cover;
@@ -89,7 +89,8 @@
   padding: 2px 13px 6px 13px;
 }
 
-.header__theme-menu-button:active {
+.header__theme-menu-button:active,
+.header__theme-menu-button_active {
   outline: 1px solid var(--decorate-color);
 }
 
@@ -117,6 +118,7 @@
   font-weight: bold;
   line-height: 23.4px;
   align-self: center;
+  margin-bottom: var(--page-offset);
 }
 
 .title-decor {
@@ -150,9 +152,9 @@
   gap: 10px;
 }
 
-.content__section-center .card {
+/* .content__section:not(.content__section-side) .card {
   grid-column: 1 / -1;
-}
+} */
 
 .card__title {
   font-size: 18px;
@@ -244,13 +246,21 @@
     margin-top: 60px;
   }
 
-  .content__section-right .card,
-  .content__section-right .card__title {
+  .content__section-side .card,
+  .content__section-side .card__title {
     grid-column: 2 / span 2;
   }
 
-  .content__section-right .section__title {
+  .content__section-side .section__title {
     grid-row: 1 / span 2;
+  }
+
+  .content__section:not(.content__section-side) .card {
+    grid-column: 1 / -1;
+  }
+
+  .content__section:not(.content__section-side) .section__title {
+    grid-column: 1;
   }
 
   .content__section:not(.gallery-section),
@@ -306,9 +316,12 @@
     margin-top: 60px;
   }
 
-  .content__section-center .card {
+  .content__section:not(.content__section-side) .card {
     grid-column: auto;
-    grid-row: 2;
+  }
+
+  .content__section:not(.content__section-side) .section__title {
+    grid-column: 1 / -1;
   }
 }
 
@@ -316,8 +329,8 @@
 /* Из-за того что gap учитывается в ширине двух сложенных колонок */
 /* Возможно, пробема в дизайне? */
 @media (width >= 768px) and (width < 1024px) {
-  .content__section-right .card,
-  .content__section-right .card__title {
+  .content__section-side .card,
+  .content__section-side .card__title {
     margin-left: 7px;
   }
 }
